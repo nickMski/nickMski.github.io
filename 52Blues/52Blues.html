@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<link href="css/if.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<h1>Some memorable movies</h1>
+
+<h3><span class = "ital">52 Blues</span> (Nick Murawski, 2023)</h3>
+	<div class = "sideBySide">
+	<img class ="filmStill" onClick="onClick_SB_img01()" src="images/brush.jpg" alt="brush">
+	<img class="filmStill" onClick="onClick_SB_img02()" src ="images/cards.jpg" alt ="cards">
+	<img class="filmStill" onClick="onClick_SB_img03()" src ="images/meal.jpg" alt="meal">
+	</div>
+
+		
+<p class="filmInfo" id="DTRT_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto dicta quas similique facilis natus consectetur, consequatur, ducimus dolorem rem minima voluptate quod, aperiam laudantium! Repellendus tempora non molestiae facilis modi hic, inventore, rem velit recusandae. Aliquam veniam perspiciatis minus est, inventore accusamus tempora hic, adipisci veritatis nihil animi placeat mollitia!</p>
+	
+<button type = "button" onClick = "gotoMovie()" id = "gotoMovie_button"> Go to the movie </button>
+
+</body>
+<script>
+	
+var gotoMovie_button = document.getElementById ("gotoMovie_button");
+	gotoMovie_button.style.visibility = "hidden";
+
+var img01_clicked = false; 
+	
+var img02_clicked = false;
+	
+var img03_clicked = false;
+	
+var DTRT_text = document.getElementById("DTRT_text");
+
+var DTRT00 = "52 Blues was made for my Film 180 class last semester. The short piece centered around loneliness is littered with aquatic symbolism. During the pandemic, I watched a documentary about a whale that can't communicate with others due to a hearing deformity. Though one would assume this whale would feel sadness because of its isolation, one could also argue that its ignorance of companionship makes its life much easier.";
+
+DTRT_text.innerHTML= DTRT00;
+	
+var DTRT01 = "I created this film at home during spring break. The documentary style shows that I'm trying to teach something to the audience. My message didn't get across well, but I tried my best. From a technical standpoint, this was my first time using proper microphone setups, though much of the audio needed to improve. There are many references to sealife within the shots to reference the theme of loneliness and to compare the main character to the 52 Hertz Whale.";
+	
+function onClick_SB_img01(){DTRT_text.innerHTML = DTRT01;
+	img01_clicked = true;
+	console.log("img01_clicked = " + img01_clicked);
+	revealButton();}
+	
+
+
+var DTRT02 = "The leading actress is my sister, and she did an excellent job in her first role ever. She worked very well with memorizing lines, and she was a good sport about refilming half of the footage after it mysteriously vanished. It was a rough shoot, but I'm happy she was there to calm me down and help me think of ideas and alternatives.";
+
+function onClick_SB_img02(){DTRT_text.innerHTML = DTRT02;
+	img02_clicked = true;
+	console.log("img02_clicked = " + img02_clicked);
+	revealButton();}	
+	
+var DTRT03 = "I wasn't nearly as bummed out during the pandemic as everybody else. Years later - after making good friends in college - I realized I didn't miss any of my companions during the pandemic because I didn't have any close companions to miss! Now that I understand the hype behind close friendships, I know why the pandemic was isolating for so many people, but at the same time, I can attest to the peace of mind that can come from being a friendless hermit such as the 52 Hertz Whale. The character in 52 Blues demonstrates that strangely, it's possible to overcome - or at least fight against -  loneliness by focusing on the health of oneself.";
+
+	
+function onClick_SB_img03() {DTRT_text.innerHTML = DTRT03; 
+	img03_clicked = true;
+	console.log("img03_clicked = " + img03_clicked);
+	revealButton();}
+	
+function revealButton(){
+if (img01_clicked && img02_clicked && img03_clicked){
+console.log("REVEAL BUTTON");
+gotoMovie_button.style.visibility = "visible";
+}
+}
+
+function gotoMovie () {window.open ("https://www.youtube.com/watch?v=jfKfPfyJRdk&ab_channel=LofiGirl" , "_blank")}
+
+
+</script>
+</html>
