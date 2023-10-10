@@ -1,0 +1,8 @@
+@charset "utf-8";
+.spongePics  {
+    width: 400px;
+    border-style: solid;
+}
+.sideBySide  {
+    display: flex;
+}

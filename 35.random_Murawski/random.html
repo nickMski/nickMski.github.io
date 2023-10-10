@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>random</title>
+<link href="css/random.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	
+<div class = "sideBySide">
+<img class = "spongePics" id=" leftImage" onClick = "randomizer(event)" src ="images/sb6.jpg" alt = "sponge"> 
+<img class = "spongePics" id=" middleImage" onClick = "randomizer(event)" src = "images/sb2.jpg"  alt = "sponge">
+<img class = "spongePics" id=" rightImage" onClick = "randomizer(event)" src = "images/sb5.jpg" alt = "sponge">
+</div>
+
+</body>
+	
+<script>
+	function randomizer(event){
+		var x = Math.floor(Math.random() * 3) + 1;
+		
+		console.log(event.currentTarget.id);
+		
+		if (x==1){
+		event.currentTarget.src = sauce;
+		}
+		
+		if (x==2){
+		event.currentTarget.src = stink;
+		}
+		
+		if (x==3){
+		event.currentTarget.src = yell;
+		} 
+	}
+	
+	
+	var leftImage = document.getElementById ("leftImage")
+	var middleImage = document.getElementById ("middleImage")
+	var rightImage = document.getElementById ("rightImage")
+	
+	var sauce = "images/sb6.jpg";
+	var stink = "images/sb2.jpg";
+	var yell = "images/sb5.jpg";
+	
+</script>
+</html>
