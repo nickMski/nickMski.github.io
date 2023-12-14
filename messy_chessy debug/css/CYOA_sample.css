@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+h1 {
+    text-align: center;
+    text-decoration: none;
+    font-size: 46px;
+}
+#DIVforButtons {
+    text-align: center;
+    float: left;
+    font-size: 50px;
+    display: flex;
+}
+
+.vidCenter {
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    height: auto;
+}
+#displayedVideo {
+    border-width: thin;
+    max-height: 600px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+body {
+    color: #FFFFFF;
+    font-family: chatime;
+    background-color: #302F2F;
+    font-size: xx-large;
+}
