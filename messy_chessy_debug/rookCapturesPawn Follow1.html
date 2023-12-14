@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>**** MESSY CHESSY ****</title>
+<link href="css/CYOA_sample.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<!-- THE TITLE ABOVE THE VIDEO -->
+
+<h1> DEFEAT THE CHESS SCHOLAR IN 2 MOVES! </h1>
+
+<!-- THE VIDEO -->
+
+<div class = "vidCenter">    
+<video id="displayedVideo" preload="auto" controls>
+<source src="video/rookCapturesPawn/compressed/Edited Rook Cap Pawn Follow 1 (Q Sac).mp4" type="video/mp4">
+</video>
+</div>
+
+<!-- THE CAPTION or PARAGRAPH UNDERNEATH THE VIDEO -->
+<!-- this appears when the video reaches its end -->
+
+<p id="caption">
+Out of moves! Maybe a pawn capture isn't the best option...
+</p>
+
+<!-- THE TWO BUTTONS UNDERNEATH THE CAPTION - CAN EASILY ADD MORE BUTTONS -->
+<!-- these appear when the video reaches its end -->
+
+<div id="DIVforButtons">
+
+<button id="BTN1" onClick="buttonOne()">Restart</button>  
+
+<button id="BTN2" onClick="buttonTwo()">Text for bottom button - Mists</button>    
+
+<button id="BTN3" onClick="buttonThree()">Text for bottom button - Mists</button>    
+
+<button id="BTN4" onClick="buttonFour()">Text for bottom button - Mists</button>    
+
+<button id="BTN5" onClick="buttonFive()">Text for bottom button - Mists</button>    
+	
+</div>
+
+<script>
+
+    document.getElementById('displayedVideo').addEventListener('ended',whenVideoEnds,false);
+        
+    var BTN1 = document.getElementById("BTN1");
+    var BTN2 = document.getElementById("BTN2"); 
+	var BTN3 = document.getElementById("BTN3");
+	var BTN4 = document.getElementById("BTN4");
+    var BTN5 = document.getElementById("BTN5");
+	
+    var caption = document.getElementById("caption");    
+
+    caption.style.display = 'none';    
+    BTN1.style.display = 'none';
+    BTN2.style.display = 'none'; 
+	BTN3.style.display = 'none'; 
+	BTN4.style.display = 'none';
+	BTN5.style.display = 'none'; 
+
+    function whenVideoEnds(e) {
+		// these three commands make the caption and the 2 buttons visible
+        caption.style.display = 'block';    
+        BTN1.style.display = 'block';
+        BTN2.style.display = 'none'; 
+		BTN3.style.display = 'none'; 
+		BTN4.style.display = 'none'; 
+		BTN5.style.display = 'none'; 
+    }
+        
+		// MAKE SURE THE WINDOW OPENS THE FILE NAME on YOUR DIRECTORY 
+		// Lines 63 and 64 are the only places you have to make a change
+    function buttonOne() {
+        window.open ('intro.html','_self',false)
+    }
+        
+    function buttonTwo() {
+        window.open ('scene1_choice2_mists.html','_self',false)
+    }    
+    function buttonThree() {
+        window.open ('scene1_choice2_mists.html','_self',false)
+    }    
+	function buttonFour() {
+        window.open ('scene1_choice2_mists.html','_self',false)
+    }    
+	function buttonFive() {
+        window.open ('scene1_choice2_mists.html','_self',false)
+    }    
+</script>
+    
+</body>
+</html>
