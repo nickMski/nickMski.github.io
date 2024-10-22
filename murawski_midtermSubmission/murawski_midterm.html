@@ -20,17 +20,6 @@
 	left:0;right:0;
 	top:0;bottom:0;
   }
-
-@font-face {
-font-family: 'Tengwar Annatar';
-    src: url('fonts/tnganbi.ttf') format('truetype');  
-}
-	@font-face {
-    font-family: 'RedGlass-BWx23';
-    src: url('fonts/RedGlass-BWx23.ttf') format('truetype');
-}
-
-	
 </style>
 <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
 <script>
@@ -686,11 +675,11 @@ if (reversed == null) { reversed = false; }
 			console.log("will change to title");
 			//fallback colors bc the internet doesn't like Franklin Gothic Heavy
 			root.elvishSymbol.elvishText.elvish.text = title;
-		root.elvishSymbol.elvishText.elvish.font = "40px 'RedGlass-BWx23' ";
+		root.elvishSymbol.elvishText.elvish.font = "30px 'Old Timey' ";
 			root.elvishSymbol.elvishGlow1.elvish.text = title;
-		root.elvishSymbol.elvishGlow1.elvish.font = "40px 'RedGlass-BWx23' ";
+		root.elvishSymbol.elvishGlow1.elvish.font = "30px 'Old Timey' ";
 			root.elvishSymbol.elvishGlow2.elvish.text = title;
-		root.elvishSymbol.elvishGlow2.elvish.font = "40px 'RedGlass-BWx23' ";
+		root.elvishSymbol.elvishGlow2.elvish.font = "30px 'Old Timey' ";
 		}
 		var title = "THE HOBBIT";
 		function invisible(e) {
